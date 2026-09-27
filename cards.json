@@ -1,5 +1,5 @@
 {
- "version": "2026-09b",
+ "version": "2026-09c",
  "categories": [
   {
    "id": "stars",
@@ -313,7 +313,7 @@
    "name": "Post Malone",
    "hint": "",
    "cat": "stars",
-   "emoji": "🍺🎸🤠",
+   "emoji": "🎸🤠✍️",
    "actor": false,
    "online": false,
    "adult": true
@@ -323,7 +323,7 @@
    "name": "Morgan Wallen",
    "hint": "",
    "cat": "stars",
-   "emoji": "🤠🍻🪑",
+   "emoji": "🤠🎸🪑",
    "actor": false,
    "online": false,
    "adult": false
@@ -331,9 +331,9 @@
   {
    "id": "stars:Shaboozey",
    "name": "Shaboozey",
-   "hint": "'A Bar Song (Tipsy)'",
+   "hint": "record-breaking country hit",
    "cat": "stars",
-   "emoji": "🍸🤠🎶",
+   "emoji": "🤠🎶🏆",
    "actor": false,
    "online": false,
    "adult": false
@@ -473,7 +473,7 @@
    "name": "Jason Momoa",
    "hint": "",
    "cat": "stars",
-   "emoji": "🔱🌊🍺",
+   "emoji": "🔱🌊💪",
    "actor": true,
    "online": false,
    "adult": false
@@ -583,7 +583,7 @@
    "name": "Jason Kelce",
    "hint": "",
    "cat": "stars",
-   "emoji": "🏈🍺👕",
+   "emoji": "🏈🦅👕",
    "actor": false,
    "online": false,
    "adult": false
@@ -633,7 +633,7 @@
    "name": "Logan Paul",
    "hint": "",
    "cat": "stars",
-   "emoji": "🥊🍹🤼",
+   "emoji": "🥊🥤🤼",
    "actor": false,
    "online": false,
    "adult": true
@@ -693,7 +693,7 @@
    "name": "Dua Lipa",
    "hint": "",
    "cat": "stars",
-   "emoji": "💃🌙🍸",
+   "emoji": "💃🌙🎤",
    "actor": false,
    "online": false,
    "adult": false
@@ -883,7 +883,7 @@
    "name": "Zach Bryan",
    "hint": "",
    "cat": "stars",
-   "emoji": "🎸🪖🍺",
+   "emoji": "🎸🪖🎤",
    "actor": false,
    "online": false,
    "adult": false
@@ -1393,7 +1393,7 @@
    "name": "Luke Combs",
    "hint": "",
    "cat": "stars",
-   "emoji": "🤠🍺🎤",
+   "emoji": "🤠🧢🎤",
    "actor": false,
    "online": false,
    "adult": false
@@ -1553,7 +1553,7 @@
    "name": "Bill Gates",
    "hint": "",
    "cat": "stars",
-   "emoji": "💻🪟💉",
+   "emoji": "💻🪟💰",
    "actor": false,
    "online": false,
    "adult": false
@@ -2183,7 +2183,7 @@
    "name": "Homer Simpson",
    "hint": "",
    "cat": "toons",
-   "emoji": "🍩🍺😮",
+   "emoji": "🍩☢️😮",
    "actor": false,
    "online": false,
    "adult": false
@@ -2193,7 +2193,7 @@
    "name": "Peter Griffin",
    "hint": "",
    "cat": "toons",
-   "emoji": "👓🍺🐔",
+   "emoji": "👓😂🐔",
    "actor": false,
    "online": false,
    "adult": true
@@ -2433,7 +2433,7 @@
    "name": "Thor",
    "hint": "",
    "cat": "toons",
-   "emoji": "🔨⚡️🍺",
+   "emoji": "🔨⚡️🦸",
    "actor": false,
    "online": false,
    "adult": false
@@ -2683,7 +2683,7 @@
    "name": "Jack Sparrow",
    "hint": "",
    "cat": "toons",
-   "emoji": "🏴‍☠️🍾🧭",
+   "emoji": "🏴‍☠️🦜🧭",
    "actor": false,
    "online": false,
    "adult": false

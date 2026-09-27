@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forehead Deck: shared deck</title>
+<style>
+  :root { --ground:#0F3D3E; --deep:#0A2B2C; --card:#FFD23F; --ink:#16181D; --mint:#B8EBD9; --muted:#9DC4BC; --text:#F4F7F2; }
+  body { margin:0; background:var(--ground); color:var(--text); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:480px; margin:0 auto; padding:32px 20px 48px; }
+  h1 { font-size:2.2rem; line-height:1; margin:0 0 6px; letter-spacing:-.02em; }
+  h1 span { color:var(--card); }
+  .muted { color:var(--muted); margin:0; }
+  .deck { background:var(--card); color:var(--ink); border-radius:18px; padding:20px; margin:24px 0; }
+  .deck h2 { margin:0 0 4px; font-size:1.5rem; }
+  .deck p { margin:0 0 12px; font-weight:600; }
+  .deck ul { margin:0; padding-left:20px; columns:2; column-gap:16px; }
+  a.btn { display:block; text-align:center; text-decoration:none; font-weight:800; border-radius:14px; padding:16px; margin-top:12px; }
+  a.primary { background:var(--card); color:var(--ink); }
+  a.secondary { border:2px solid var(--mint); color:var(--mint); }
+  .error { background:var(--deep); border-radius:14px; padding:16px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Forehead <span>Deck</span></h1>
+  <p class="muted">A friend shared a deck with you.</p>
+  <div id="deck" class="deck" hidden>
+    <h2 id="name"></h2>
+    <p id="count"></p>
+    <ul id="cards"></ul>
+  </div>
+  <a id="open" class="btn primary" hidden>Open in Forehead Deck</a>
+  <a class="btn secondary" href="https://apps.apple.com/app/id6816723328">Get Forehead Deck (free)</a>
+  <p id="error" class="error" hidden>This link doesn't contain a deck. Ask your friend to send it again.</p>
+</main>
+<script>
+  // The deck lives in the URL after "#", gzipped and base64url-encoded,
+  // so this page never sends it anywhere.
+  async function decode(code) {
+    const b64 = code.replace(/-/g, '+').replace(/_/g, '/');
+    const bytes = Uint8Array.from(atob(b64 + '==='.slice((b64.length + 3) % 4)), c => c.charCodeAt(0));
+    const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return JSON.parse(await new Response(stream).text());
+  }
+  (async () => {
+    const code = location.hash.slice(1);
+    try {
+      const deck = await decode(code);
+      document.getElementById('name').textContent = deck.n || 'Shared deck';
+      document.getElementById('count').textContent = deck.c.length + ' cards';
+      const list = document.getElementById('cards');
+      deck.c.slice(0, 12).forEach(n => { const li = document.createElement('li'); li.textContent = n; list.appendChild(li); });
+      if (deck.c.length > 12) { const li = document.createElement('li'); li.textContent = '…and ' + (deck.c.length - 12) + ' more'; list.appendChild(li); }
+      document.getElementById('deck').hidden = false;
+      const open = document.getElementById('open');
+      open.href = 'foreheaddeck://import?d=' + encodeURIComponent(code);
+      open.hidden = false;
+    } catch (e) {
+      document.getElementById('error').hidden = false;
+    }
+  })();
+</script>
+</body>
+</html>

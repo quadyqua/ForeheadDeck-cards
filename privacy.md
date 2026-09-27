@@ -7,6 +7,7 @@ Forehead Deck does not collect, store or share any personal information.
 - **No accounts.** You never sign up or log in.
 - **No tracking or analytics.** The app contains no advertising or analytics code.
 - **Your custom decks stay on your phone.** Names you type into custom decks are saved only on your device and are never uploaded.
+- **Shared deck links.** When you share a deck, the whole deck is packed into the link itself. It goes only to the people you send it to; it's never uploaded to us.
 - **Card updates.** The app downloads a public list of cards from our server to get monthly updates. This request doesn't include anything about you.
 - **Purchases.** In-app purchases are handled entirely by Apple. We never see your payment details.
 - **Motion sensor.** The app reads your phone's motion sensor during a round to detect tilts. That data is used live and never saved or sent anywhere.

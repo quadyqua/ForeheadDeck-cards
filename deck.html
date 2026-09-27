@@ -48,9 +48,9 @@
     try {
       const deck = await decode(code);
       document.getElementById('name').textContent = deck.n || 'Shared deck';
-      document.getElementById('count').textContent = deck.c.length + ' cards';
+      document.getElementById('count').textContent = deck.c.length + (deck.c.length === 1 ? ' card' : ' cards');
       const list = document.getElementById('cards');
-      deck.c.slice(0, 12).forEach(n => { const li = document.createElement('li'); li.textContent = n; list.appendChild(li); });
+      deck.c.slice(0, 12).forEach(n => { const li = document.createElement('li'); li.textContent = n.split('|')[0].trim(); list.appendChild(li); });
       if (deck.c.length > 12) { const li = document.createElement('li'); li.textContent = '…and ' + (deck.c.length - 12) + ' more'; list.appendChild(li); }
       document.getElementById('deck').hidden = false;
       const open = document.getElementById('open');

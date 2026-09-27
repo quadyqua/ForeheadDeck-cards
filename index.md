@@ -3,7 +3,7 @@
 A phone-on-your-forehead guessing game for iPhone. Hold the phone to your forehead, and everyone else helps you guess who you are.
 
 ## Support
-Questions or problems? Email [your support email].
+Questions or problems? Email [themelonslayer@gmail.com](mailto:themelonslayer@gmail.com).
 
 - [Privacy policy](privacy.html)
 
